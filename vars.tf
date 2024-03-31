@@ -4,8 +4,7 @@ variable "policies" {
   description = "A list of HashiCorp Vault policies to attach to Azure Groups."
 }
 
-variable "auth_method" {
+variable "mount_accessor" {
   type = string
-  default = "token"
-  description = "The path of the auth method to attach the group alias to. Default to 'token'."
+  description = "The mount accessor of the auth method used for OIDC access"
 }

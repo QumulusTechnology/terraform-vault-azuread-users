@@ -23,6 +23,6 @@ resource "vault_identity_entity_alias" "user_alias" {
   for_each = local.azure_users
 
   name           = each.value
-  mount_accessor = var.auth_method
+  mount_accessor = var.mount_accessor
   canonical_id   = vault_identity_entity.azure_users[each.key].id
 }
